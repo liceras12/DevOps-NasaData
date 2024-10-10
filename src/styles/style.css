@@ -1,0 +1,213 @@
+@import "leaflet/dist/leaflet.css";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.general {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.nasa-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.56);
+  padding: 2px;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 3.0em;
+  font-family: 'Franklin Gothic Medium';
+}
+
+.logo{
+display: flex;
+flex-direction: row;
+text-align: center;
+justify-content: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 27px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section {
+  max-width: 600px;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-width: 100%;
+  padding: 10px;
+  color: white;
+  align-content: baseline;
+  text-align: center;
+}
+
+.infoCapsule {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 35px;
+  padding: 10px;
+  color: white;
+  text-align: justify;
+  justify-items: right;
+  float: right;
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  .infoCapsule {
+    width: 30%;
+    float: right;
+  }
+}
+.grandTitle{
+  font-size: xx-large;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.subTitle {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.textContent {
+  font-size: 16px;
+  color: white;
+}
+
+.pFormat {
+  color: white;
+  font-size: medium;
+}
+
+.centre {
+  align-items: center;
+}
+
+.content{
+  position: relative;
+  z-index: 2; /* Asegura que el contenido esté por encima de la marca de agua */
+  padding: 20px;
+}
+
+.contentCard {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 25px;
+  padding: 10px;
+  color: white;
+  text-align: start;
+  width: 40%;
+}
+
+.frame{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+.nasa-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: auto;
+  opacity: 0.2;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 80%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 6px 16px;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.button.selected {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+  cursor: not-allowed;
+  transform: scale(1);
+  opacity: 0.8;
+}
+
+.button:disabled {
+  background-color: #d3d3d3;
+  color: #6c757d;
+  border-color: #d3d3d3;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.image{
+  width: 100%;
+  height: 350px;
+  border-radius: 5px;
+}
